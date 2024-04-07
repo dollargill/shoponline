@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'ProductSans-Black';
+    src: url('./fonts/ProductSans-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProductSans-Bold';
+    src: url('./fonts/ProductSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProductSans-Light';
+    src: url('./fonts/ProductSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProductSans-Medium';
+    src: url('./fonts/ProductSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProductSans-Regular';
+    src: url('./fonts/ProductSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProductSans-Thin';
+    src: url('./fonts/ProductSans-Thin.ttf') format('truetype');
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1E1E1E;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'ProductSans-Regular';
+    color: #8f8f8f; /* Lighter text for better readability */
+}
+
+.header-logo {
+    text-align: center;
+    width: 100%;
+}
+
+.dim {
+    margin-top: -30px;
+    color: #707070;
+    font-family: 'ProductSans-Regular';
+}
+
+.h2 {
+    font-family: 'ProductSans-Bold';
+}
+
+.header-logo h1 {
+    font-size: 60px;
+    font-family: 'ProductSans-Black';
+}
+
+.navigation {
+    text-align: center;
+    font-size: 0; /* Remove spacing between inline-block elements */
+    background-color: #464646; /* Light grey background for the entire navigation bar */
+    border-radius: 20px; /* Rounded corners for the navigation bar */
+    display: inline-block; /* Wrap navigation */
+    padding: 5px; /* Padding around the buttons within the navigation bar */
+    margin-bottom: 20px; /* Spacing below the navigation bar */
+    margin-top: 50px;
+}
+
+.nav-button {
+    font-family: 'ProductSans-Regular';
+    font-size: 20px; /* Reset the font size */
+    
+    color: #fff; /* Text color */
+    text-decoration: none;
+    padding: 10px 20px; /* Button padding */
+    display: inline-block; /* Align buttons in a row */
+    border-radius: 15px; /* Rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth background transition */
+    margin: 0 2px; /* Small gap between buttons */
+}
+
+.nav-button:hover, .nav-button.active {
+    background-color: #1E1E1E; /* Highlight color for hover/active state */
+    color: #ffffff; /* Text color for hover/active state */
+}
+
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Adjust spacing between items as needed */
+    padding: 20px;
+    max-width: 1200px; /* Max width can be set to ensure proper spacing */
+    margin: auto; /* This centers the container if it's not full width */
+    font-family: 'ProductSans-Regular';
+    
+}
+
+.item {
+    background-color: #333; /* Added background color for items */
+    color: #fff; /* Text color adjustment for readability */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left */
+    border-radius: 10px; /* Rounded corners for the items */
+   margin: 10px;
+   font-family: 'ProductSans-Regular';
+   display: inline-block;
+    border: 1px solid #6d6d6d; /* Border for definition */
+    font-family: 'ProductSans-Regular';
+}
+
+.item img {
+    width: 100%; /* Ensure the image fills the container */
+    border-radius: 5px; /* Rounded corners for the image */
+    margin-bottom: 10px; /* Add some space between image and information */
+}
+
+.item-title {
+    font-size: 18px;
+    margin-bottom: 10px; /* Add some space between title and image */
+}
+
+.item-info {
+    font-size: 14px;
+}
+
+.item button {
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+.item button:hover {
+    background-color: #0056b3;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.form-control {
+   
+    width: 100%; /* Full width */
+    padding: 0.375rem 0.75rem; /* Bootstrap's default padding */
+    font-size: 1rem; /* Bootstrap's default font size */
+    line-height: 1.5; /* Bootstrap's default line height */
+    color: #8a8a8a; /* Bootstrap's default text color */
+    background-color: #333; /* White background */
+    background-clip: padding-box; /* Bootstrap's default background clip */
+    border: 1px solid #4e4e4e; /* Bootstrap's default border */
+    border-radius: 0.25rem; /* Bootstrap's default border radius */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition for focus */
+    font-family: 'ProductSans-Regular';
+}
+
+.form-control:focus {
+    color: #c2c2c2;
+    background-color: #333;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    color: #fff;
+    font-family: 'ProductSans-Regular';
+    background-color: #007bff;
+    border-color: #007bff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Add any other styles for your form here */
+
+
+.maintenance-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between buttons as needed */
+    margin-bottom: 20px;
+    font-family: 'ProductSans-Regular';
+}
+
+
+.btn-primary {
+    /* Primary button styling */
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+    font-family: 'ProductSans-Bold';
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    font-family: 'ProductSans-Bold';
+}
+
+
+.footer-logo {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    color: #707070;
+}

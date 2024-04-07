@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bidding Interface</title>
+    <link href="page.css" rel="stylesheet"> <!-- Update path as needed -->
+</head>
+<body>
+    <header class="header-logo">
+        <h1>Shop Online</h1>
+        <p class="dim">the World's Luxury Marketplace. 💵</p>
+    </header>
+    <div class="navigation">
+        <a id="nav-bidding" class="nav-button" href="bidding_interface.htm">Bidding</a>
+        <a id="nav-list-item" class="nav-button" href="list_item.htm">List an Item</a>
+        <a id="nav-maintenance" class="nav-button" href="maintenance.htm">Maintenance</a>
+    </div>
+    
+    
+    
+    <h2 class="h2">⭐ Live Bidding Items</h2> <!-- Page content heading -->
+
+    <div id="itemsContainer" class="items-container">
+        <!-- Items will be dynamically loaded here -->
+        <!-- Sample item structure -->
+        <div class="item">
+            <h3 class="item-title">Item Name</h3> <!-- Item name above the image -->
+            <img src="path_to_your_image.jpg" alt="Item Image">
+            <div class="item-info">
+                <!-- Item information below the image -->
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Price: $100</p>
+            </div>
+            <button onclick="placeBid(itemID)">Place Bid</button>
+            <button onclick="buyNow(itemID, buyItNowPrice)">Buy Now</button>
+        </div>
+        <!-- Repeat this structure for each item -->
+    </div>
+
+    <footer class="footer-logo">
+        <p>© 2024 Dollar Karan Preet Singh. All rights reserved.<br> COS80021-Web Application Development</p>
+    </footer>
+
+    <script>
+        function fetchItems() {
+            fetch('view_items.php') // Adjust the path as necessary.
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('itemsContainer').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error fetching items:', error);
+                    document.getElementById('itemsContainer').innerHTML = '<p>Error loading items.</p>';
+                });
+        }
+
+        // Initial fetch
+        fetchItems();
+
+        // Refresh the item list every 5 seconds
+       /* setInterval(fetchItems, 5000); */
+
+        function placeBid(itemID) {
+            const bidPrice = prompt("Enter your bid price:");
+            if (bidPrice) {
+                // Placeholder for AJAX call to place_bid.php
+                console.log(`Placing bid for item ${itemID} with price ${bidPrice}`);
+                // Add AJAX call here to update the bid
+            }
+        }
+
+        function buyNow(itemID, buyItNowPrice) {
+            const confirmation = confirm("Are you sure you want to buy this item now for " + buyItNowPrice + "?");
+            if (confirmation) {
+                // Placeholder for AJAX call to buy_now.php
+                console.log(`Buying item ${itemID} for price ${buyItNowPrice}`);
+                // Add AJAX call here to purchase the item
+            }
+        }
+        function setActiveButton() {
+        // Get the current URL
+        var currentPath = window.location.pathname.split('/').pop();
+
+        // Remove 'active' class from all nav buttons
+        document.querySelectorAll('.nav-button').forEach(function(navButton) {
+            navButton.classList.remove('active');
+        });
+
+        // Add 'active' class to the nav button that matches the current URL
+        if (currentPath === 'bidding_interface.htm') {
+            document.getElementById('nav-bidding').classList.add('active');
+        } else if (currentPath === 'list_item.htm') {
+            document.getElementById('nav-list-item').classList.add('active');
+        } else if (currentPath === 'maintenance.htm') {
+            document.getElementById('nav-maintenance').classList.add('active');
+        }
+    }
+
+    // Call the function to set the active button
+    setActiveButton();
+    </script>
+</body>
+</html>

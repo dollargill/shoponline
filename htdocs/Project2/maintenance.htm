@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auction Maintenance</title>
+    <link href="page.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header-logo">
+        <h1>Shop Online</h1>
+        <p class="dim">The World's Luxury Marketplace. 💵</p>
+    </header>
+    <div class="navigation">
+        <a id="nav-bidding" class="nav-button" href="bidding_interface.htm">Bidding</a>
+        <a id="nav-list-item" class="nav-button" href="list_item.htm">List an Item</a>
+        <a id="nav-maintenance" class="nav-button active" href="maintenance.htm">Maintenance</a>
+    </div>
+
+    <h2>⌛ Auction Maintenance</h2>
+    <div class="maintenance-buttons">
+        <button class="btn btn-primary" onclick="processAuctionItems()">Process Auction Items</button>
+        <button class="btn btn-primary" onclick="generateReport()">Generate Report</button>
+    </div>
+
+    <div id="output"></div>
+
+    <footer class="footer-logo">
+        <p>© 2024 Dollar Karan Preet Singh. All rights reserved.<br>COS80021-Web Application Development</p>
+    </footer>
+
+    <script>
+        function processAuctionItems() {
+            fetch('process_items.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('output').innerHTML = data;
+                });
+        }
+
+        function generateReport() {
+            fetch('generate_report.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('output').innerHTML = data;
+                });
+        }
+    </script>
+</body>
+</html>

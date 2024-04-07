@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List an Item for Auction</title>
+    <link href="page.css" rel="stylesheet">
+    <script>
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const navItems = document.querySelectorAll('.nav-button');
+    const currentLocation = window.location.href;
+
+    navItems.forEach(item => {
+      if(currentLocation.includes(item.href)){
+        item.classList.add('active');
+      }
+    });
+  });
+
+
+</script>
+</head>
+<body>
+    <header class="header-logo">
+        <h1>Shop Online</h1>
+        <p class="dim">the World's Luxury Marketplace. 💵</p>
+    </header>
+    <div class="navigation">
+        <a id="nav-bidding" class="nav-button" href="bidding_interface.htm">Bidding</a>
+        <a id="nav-list-item" class="nav-button active" href="list_item.htm">List an Item</a>
+        <a id="nav-maintenance" class="nav-button" href="maintenance.htm">Maintenance</a>
+    </div>
+    <h2 class="h2">📦 List an Item for Auction</h2>
+    <form action="add_item.php" method="post">
+        <input type="text" class="form-control" id="itemName" name="itemName" placeholder="Item Name" required><br><br>
+        
+        <select class="form-control" id="category" name="category">
+            <option value="Electronics">Electronics</option>
+            <option value="Books">Books</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Cars">Cars</option>
+        </select><br><br>
+        
+        <textarea class="form-control" id="description" name="description" placeholder="Item Description" required></textarea><br><br>
+        
+        <input type="number" class="form-control" id="startingPrice" name="startingPrice" placeholder="Starting Price" step="0.01" required><br><br>
+        
+        <input type="number" class="form-control" id="reservePrice" name="reservePrice" placeholder="Reserve Price" step="0.01" required><br><br>
+        
+        <input type="number" class="form-control" id="buyItNowPrice" name="buyItNowPrice" placeholder="Buy It Now Price" step="0.01" required><br><br>
+        
+        <button type="submit" class="btn btn-primary">List Item</button>
+    </form>
+    <footer class="footer-logo">
+        <p>© 2024 Dollar Karan Preet Singh. All rights reserved.<br>COS80021-Web Application Development</p>
+    </footer>
+</body>
+</html>
