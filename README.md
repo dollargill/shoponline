@@ -1,8 +1,8 @@
 
-# Online Auction System Project
+# ShopOnline Project
 
 ## Project Overview
-The Online Auction System is a web-based application that allows users to list items for auction, place bids, and purchase items outright through a "Buy It Now" option. The project is structured into several key components, including user login/registration, item listing, bidding, and maintenance functionalities. It utilizes a mix of HTML, CSS, JavaScript, PHP, and XML, with a focus on client-server interaction via Ajax. This README details the functionalities provided by each component and the project's structure.
+The Shop Online Project is a web-based application that allows users to list items for auction, place bids, and purchase items outright through a "Buy It Now" option. The project is structured into several key components, including user login/registration, item listing, bidding, and maintenance functionalities. It utilizes a mix of HTML, CSS, JavaScript, PHP, and XML, with a focus on client-server interaction via Ajax. This README details the functionalities provided by each component and the project's structure.
 
 ### Detailed Component Descriptions
 
