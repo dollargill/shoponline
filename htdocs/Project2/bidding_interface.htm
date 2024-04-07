@@ -58,25 +58,46 @@
         fetchItems();
 
         // Refresh the item list every 5 seconds
-       /* setInterval(fetchItems, 5000); */
+            setInterval(fetchItems, 5000); 
 
-        function placeBid(itemID) {
-            const bidPrice = prompt("Enter your bid price:");
-            if (bidPrice) {
-                // Placeholder for AJAX call to place_bid.php
-                console.log(`Placing bid for item ${itemID} with price ${bidPrice}`);
-                // Add AJAX call here to update the bid
-            }
-        }
+            function placeBid(itemID) {
+    const bidPrice = prompt("Enter your bid price:");
+    if (bidPrice) {
+        fetch('place_bid.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `itemID=${itemID}&bidPrice=${bidPrice}`
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data); // Display the server response
+            fetchItems(); // Refresh the items list to show the updated bid
+        })
+        .catch(error => console.error('Error:', error));
+    }
+}
 
-        function buyNow(itemID, buyItNowPrice) {
-            const confirmation = confirm("Are you sure you want to buy this item now for " + buyItNowPrice + "?");
-            if (confirmation) {
-                // Placeholder for AJAX call to buy_now.php
-                console.log(`Buying item ${itemID} for price ${buyItNowPrice}`);
-                // Add AJAX call here to purchase the item
-            }
-        }
+function buyNow(itemID, buyItNowPrice) {
+    const confirmation = confirm("Are you sure you want to buy this item now for " + buyItNowPrice + "?");
+    if (confirmation) {
+        fetch('buy_now.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `itemID=${itemID}&buyItNowPrice=${buyItNowPrice}`
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data); // Display the server response
+            fetchItems(); // Refresh the items list to show the item as sold
+        })
+        .catch(error => console.error('Error:', error));
+    }
+}
+
         function setActiveButton() {
         // Get the current URL
         var currentPath = window.location.pathname.split('/').pop();
