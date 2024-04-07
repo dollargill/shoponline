@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+  <customer>
+    <id>1</id>
+    <firstName>Dollar</firstName>
+    <surname>Singh</surname>
+    <email>mrdollargill@gmail.com</email>
+    <password>$2y$10$uLvsi0Nha3USpFIRch9wv.lo24t1FkGUGBWX4xX9qt.7I1o8SacCu</password>
+    <dob>1988-03-05</dob>
+  </customer>
+  <customer>
+    <id>2</id>
+    <firstName>Muskan</firstName>
+    <surname>Gulia</surname>
+    <email>muskan@gmail.com</email>
+    <password>$2y$10$j1A9/55IhhecfnPRecCqA.lw6Iwdlf/I9.FeFuC0hxG.O3zyNrfj6</password>
+    <dob>1995-10-09</dob>
+  </customer>
+  <customer>
+    <id>4</id>
+    <firstName>Dollar</firstName>
+    <surname>Singh</surname>
+    <email>thedollargill@gmail.com</email>
+    <password>$2y$10$YZdSJoPvj/R7ifqxtQ849.QxwHf8GUOmPgo.Y7U4IZsRfoe.H2V7S</password>
+    <dob/>
+  </customer>
+  <customer>
+    <id>5</id>
+    <firstName>Dollar</firstName>
+    <surname>Singh</surname>
+    <email>dollar@gmail.com</email>
+    <password>$2y$10$XUylz/nX1nyO5dVlMcw1OeQ3azs0N97AtRtrTrdSJ.nYVoPA9k9Pq</password>
+    <dob>2024-04-04</dob>
+  </customer>
+</customers>
